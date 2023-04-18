@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Registration;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +14,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $base_registration = Registration::create([
+            'first_name' => 'Tuur',
+            'last_name' => 'Delacroix',
+            'email' => 'tuur.delacroix@student.howest.be',
+            'registration_time' => date()
+        ]);
     }
 }
