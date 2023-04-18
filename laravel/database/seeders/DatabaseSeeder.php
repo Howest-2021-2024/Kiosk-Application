@@ -17,8 +17,7 @@ class DatabaseSeeder extends Seeder
         $base_registration = Registration::create([
             'first_name' => 'Tuur',
             'last_name' => 'Delacroix',
-            'email' => 'tuur.delacroix@student.howest.be',
-            'registration_time' => date()
+            'email' => 'tuur.delacroix@student.howest.be'
         ]);
     }
 }

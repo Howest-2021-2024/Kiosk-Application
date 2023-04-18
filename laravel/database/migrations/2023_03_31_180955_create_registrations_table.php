@@ -18,7 +18,6 @@ class CreateRegistrationsTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email')->unique();
-            $table->timestamp('registration_time')->useCurrent();
             $table->timestamps();
         });
     }
