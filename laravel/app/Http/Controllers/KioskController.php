@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class KioskController extends Controller
 {
-    //
+    public function index()
+    {
+        return view('registrations.index');
+    }
 }
