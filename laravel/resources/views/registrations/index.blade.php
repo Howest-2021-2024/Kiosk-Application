@@ -18,7 +18,7 @@
                     </thead>
                     <tbody>
                         <!-- Voorbeeld van een registratie -->
-                        @foreach($registrations as $person)
+                        @foreach($registrations->where('created_at', '>=', \Carbon\Carbon::today()) as $person)
                         <tr>
                             <td>{{ $person->registration_id }}</td>
                             <td>{{ $person->first_name }} {{ $person->last_name }}</td>
