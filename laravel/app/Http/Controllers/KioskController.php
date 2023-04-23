@@ -17,11 +17,11 @@ class KioskController extends Controller
     public function register(Request $request)
     {
         $data = $request->all();
-        $registration = RegistrationService->register($data);
+        $registration = RegistrationService::class->register($data);
 
-        if (RegistrationService->hasErrors())
+        if (RegistrationService::class->hasErrors())
         {
-            return ["errors" => RegistrationService->getErrors()];
+            return ["errors" => RegistrationService::class->getErrors()];
         }
 
         return $registration;

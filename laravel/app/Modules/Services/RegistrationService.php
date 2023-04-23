@@ -2,7 +2,6 @@
 
 namespace App\Modules\Services;
 
-use App\Models\Patient;
 use App\Models\Registration;
 use Illuminate\Support\Facades\Validator;
 
@@ -14,7 +13,7 @@ class RegistrationService extends Service
         'email' => 'required|string|email|max:255|unique:registrations',
     ];
 
-    public function __construct(Patient $model)
+    public function __construct(Registration $model)
     {
         parent::__construct($model);
     }
