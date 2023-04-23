@@ -3,6 +3,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
+
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -34,17 +35,17 @@
                     @csrf
                     <div class="form-group">
                         <label for="firstname">Voornaam:</label>
-                        <input type="text" class="form-control" id="firstname">
+                        <input type="text" class="form-control" id="firstname" name="firstname">
                     </div>
                     <div class="form-group">
                         <label for="lastname">Achternaam:</label>
-                        <input type="text" class="form-control" id="lastname">
+                        <input type="text" class="form-control" id="lastname" name="lastname">
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email">
+                        <input type="email" class="form-control" id="email" name="email">
                     </div>
-            
+
                     <button type="submit" class="btn btn-primary">Registreer</button>
                 </form>
             </div>
