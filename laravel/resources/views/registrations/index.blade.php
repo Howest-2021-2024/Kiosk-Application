@@ -8,22 +8,22 @@
         <div class="row">
             <!-- Linkerkolom voor weergave van registraties -->
             <div class="col-md-6">
-                <h2>Weergave van Registraties</h2>
+                <h2>Registraties Vandaag</h2>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
+                            <th>Nr</th>
                             <th>Naam</th>
-                            <th>Email</th>
-                            <th>Telefoon</th>
                         </tr>
                     </thead>
                     <tbody>
                         <!-- Voorbeeld van een registratie -->
+                        @foreach($students as $student)
                         <tr>
-                            <td>John Doe</td>
-                            <td>johndoe@example.com</td>
-                            <td>0123456789</td>
+                            <td>{{ $student->registration_id }}</td>
+                            <td>{{ $student->first_name }} {{ $student->last_name }}</td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
@@ -32,17 +32,18 @@
                 <h2>Nieuwe Registratie</h2>
                 <form>
                     <div class="form-group">
-                        <label for="naam">Naam:</label>
-                        <input type="text" class="form-control" id="naam">
+                        <label for="firstname">Voornaam:</label>
+                        <input type="text" class="form-control" id="firstname">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Achternaam:</label>
+                        <input type="text" class="form-control" id="lastname">
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
                         <input type="email" class="form-control" id="email">
                     </div>
-                    <div class="form-group">
-                        <label for="telefoon">Telefoon:</label>
-                        <input type="tel" class="form-control" id="telefoon">
-                    </div>
+            
                     <button type="submit" class="btn btn-primary">Registreer</button>
                 </form>
             </div>
