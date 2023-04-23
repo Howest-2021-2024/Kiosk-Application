@@ -15,6 +15,7 @@
                         <tr>
                             <th>Nr</th>
                             <th>Naam</th>
+                            <th>Tijdstip</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -23,6 +24,7 @@
                         <tr>
                             <td>{{ $person->registration_id }}</td>
                             <td>{{ $person->first_name }} {{ $person->last_name }}</td>
+                            <td>{{ $person->created_at }}</td>
                         </tr>
                         @endforeach
                     </tbody>
