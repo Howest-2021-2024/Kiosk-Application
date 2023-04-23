@@ -30,7 +30,7 @@
             <!-- Rechterkolom voor het registreren van nieuwe registraties -->
             <div class="col-md-6">
                 <h2>Nieuwe Registratie</h2>
-                <form>
+                <form method="POST" action="/register">
                     <div class="form-group">
                         <label for="firstname">Voornaam:</label>
                         <input type="text" class="form-control" id="firstname">

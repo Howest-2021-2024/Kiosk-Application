@@ -15,3 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [KioskController::class, 'index']);
+
+Route::post('/register', [KioskController::class, 'register']);

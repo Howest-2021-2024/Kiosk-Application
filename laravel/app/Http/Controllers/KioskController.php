@@ -12,4 +12,9 @@ class KioskController extends Controller
         $registrations = Registration::all();
         return view('registrations.index', ['registrations' => $registrations]);
     }
+
+    public function register(Request $request)
+    {
+        dd($request->all());
+    }
 }
