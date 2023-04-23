@@ -23,7 +23,7 @@
                         @foreach($registrations->where('created_at', '>=', \Carbon\Carbon::today()) as $person)
                         <tr>
                             <td>{{ $person->registration_id }}</td>
-                            <td>{{ $person->first_name }} {{ $person->last_name }}</td>
+                            <td>{{ $person->first_name }} {{ $person->last_name }} ({{ $person->email }})</td>
                             <td>{{ $person->created_at }}</td>
                         </tr>
                         @endforeach
