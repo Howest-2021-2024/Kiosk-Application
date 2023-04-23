@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Registration;
+use App\Modules\Services\RegistrationService;
 use Illuminate\Http\Request;
 
 class KioskController extends Controller
@@ -15,6 +16,14 @@ class KioskController extends Controller
 
     public function register(Request $request)
     {
-        dd($request->all());
+        $data = $request->all();
+        $registration = RegistrationService->register($data);
+
+        if (RegistrationService->hasErrors())
+        {
+            return ["errors" => RegistrationService->getErrors()];
+        }
+
+        return $registration;
     }
 }
