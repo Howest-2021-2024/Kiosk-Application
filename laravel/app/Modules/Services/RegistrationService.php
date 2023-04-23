@@ -35,6 +35,6 @@ class RegistrationService extends Service
         $registration->save();
 
         // Redirect naar de bedankpagina
-        return view('registration.thankyou');
+        return view('registrations.thankyou');
     }
 }
