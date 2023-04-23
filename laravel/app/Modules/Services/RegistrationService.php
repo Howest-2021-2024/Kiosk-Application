@@ -3,6 +3,7 @@
 namespace App\Modules\Services;
 
 use App\Models\Patient;
+use App\Models\Registration;
 use Illuminate\Support\Facades\Validator;
 
 class RegistrationService extends Service
@@ -29,8 +30,8 @@ class RegistrationService extends Service
 
         // Maak een nieuwe registratie aan
         $registration = new Registration();
-        $registration->firstname = $data['firstname'];
-        $registration->lastname = $data['lastname'];
+        $registration->first_name = $data['firstname'];
+        $registration->last_name = $data['lastname'];
         $registration->email = $data['email'];
         $registration->save();
 
