@@ -31,6 +31,7 @@
             <div class="col-md-6">
                 <h2>Nieuwe Registratie</h2>
                 <form method="POST" action="/register">
+                    @csrf
                     <div class="form-group">
                         <label for="firstname">Voornaam:</label>
                         <input type="text" class="form-control" id="firstname">
