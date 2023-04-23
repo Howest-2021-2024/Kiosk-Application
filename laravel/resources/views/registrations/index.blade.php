@@ -18,10 +18,10 @@
                     </thead>
                     <tbody>
                         <!-- Voorbeeld van een registratie -->
-                        @foreach($students as $student)
+                        @foreach($registrations as $person)
                         <tr>
-                            <td>{{ $student->registration_id }}</td>
-                            <td>{{ $student->first_name }} {{ $student->last_name }}</td>
+                            <td>{{ $person->registration_id }}</td>
+                            <td>{{ $person->first_name }} {{ $person->last_name }}</td>
                         </tr>
                         @endforeach
                     </tbody>
