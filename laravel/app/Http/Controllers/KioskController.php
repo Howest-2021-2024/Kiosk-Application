@@ -8,6 +8,14 @@ use Illuminate\Http\Request;
 
 class KioskController extends Controller
 {
+
+    private $registerService;
+    
+    public function __construct(RegistrationService $registerService)
+    {
+        $this->_registerService = $registerService;
+    }
+
     public function index()
     {
         $registrations = Registration::all();
@@ -17,11 +25,11 @@ class KioskController extends Controller
     public function register(Request $request)
     {
         $data = $request->all();
-        $registration = RegistrationService::class->register($data);
+        $registration = $this->_registerService->register($data);
 
-        if (RegistrationService::class->hasErrors())
+        if ($this->_registerService->hasErrors())
         {
-            return ["errors" => RegistrationService::class->getErrors()];
+            return ["errors" => $this->_registerService->getErrors()];
         }
 
         return $registration;
